@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ea ipsa sed perspiciatis dolore obcaecati esse nihil dolor harum, alias reprehenderit placeat aliquam voluptas illum deserunt ratione, voluptate, dignissimos possimus!</p>
-</body>
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="/" class="navbar-logo">MFR<span>akhman</span></a>
+      <div class="navbar-nav">
+        <a href="#home" class="nav-item" id="nav-home">Home</a>
+        <a href="#portfolio" class="nav-item" id="nav-portfolio">Portfolio</a>
+        <a href="#contact" class="nav-item" id="nav-contact">Contact</a>
+      </div>
+      <!-- Extras Navbar -->
+      <div class="navbar-extra">
+        <a href="#" id="search">
+          <i data-feather="search"></i>
+        </a>
+        <a href="#" id="hamburger-menu">
+          <i data-feather="menu"></i>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header>
+      <div id="home">
+        <h2>Head</h2>
+      </div>
+    </header>
+    <main>
+      <div id="portfolio">
+        <h2>Main</h2>
+      </div>
+    </main>
+<footer>
+    <div id="contact">
+        <h2>Contact</h2>
+    </div>
+</footer>
+    <!-- Feather Icon -->
+    <script>
+      feather.replace();
+    </script>
+    <script src="assets/script/navbar.js"></script>
+  </body>
 </html>
