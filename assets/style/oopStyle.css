@@ -1,0 +1,28 @@
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.exp {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+
+.booksTable {
+  border: 1px solid black;
+}
+
+.booksTableHead td,
+th {
+  border: 1px solid black;
+}
+
+.book-item td {
+  border: 1px solid black;
+}
+
+.form-search input {
+  border: none;
+  outline: none;
+}
