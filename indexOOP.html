@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>mfrakhman books list</title>
+    <link rel="stylesheet" href="assets/style/oopStyle.css" />
   </head>
-  <body></body>
+
+  <body>
+    <div class="title">
+      <span>Books List</span>
+      <span>example of OOP</span>
+    </div>
+    <div class="exp">
+      <span>Table of Books List:</span>
+    </div>
+    <table class="booksTable" id="table-book">
+      <thead class="booksTableHead">
+        <tr>
+          <th>Books List</th>
+          <th colspan="3" class="form-search">
+            <div>
+              <input type="text" placeholder="Search" />
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>Author</td>
+          <td>Year</td>
+          <td>Category</td>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
+    <script src="assets/script/oop.js"></script>
+  </body>
 </html>
