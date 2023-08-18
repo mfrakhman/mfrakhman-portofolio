@@ -10,6 +10,24 @@ class Book {
   getBook() {
     return this;
   }
+
+  static setTableRow() {
+    const table = document.getElementById("book-list");
+    LIST_OF_BOOKS.forEach(book => {
+      const row = document.createElement("tr");
+      row.innerHTML =
+        `<td>${book.title}</td>` +
+        `<td>${book.author}</td>` +
+        `<td>${book.year}</td>` +
+        `<td>${book.category ? book.category : "-"}</td>`;
+      row.classList.add("book-item");
+      table.appendChild(row);
+    });
+  }
+
+  static findByTitle(title) {
+    const table = document.getElementById("book-list");
+  }
 }
 
 // Book Child Biography
@@ -65,16 +83,13 @@ const science_1 = new ScieceBook("Eloquent JavaScipt", "Haverbeke", "2013");
 science_1.setCategory("Programing");
 LIST_OF_BOOKS.push(science_1.getBook());
 
-console.log(LIST_OF_BOOKS);
+Book.setTableRow();
 
-const table = document.getElementById("book-list");
-LIST_OF_BOOKS.forEach(book => {
-  const row = document.createElement("tr");
-  row.innerHTML =
-    `<td>${book.title}</td>` +
-    `<td>${book.author}</td>` +
-    `<td>${book.year}</td>` +
-    `<td>${book.category ? book.category : "-"}</td>`;
-  row.classList.add("book-item");
-  table.appendChild(row);
+// Search By Title
+const inputSearch = document.getElementById("search-book");
+inputSearch.addEventListener("keyup", e => {
+  console.log(inputSearch.value);
+  Book.findByTitle(inputSearch.value);
 });
+
+console.log(LIST_OF_BOOKS);
