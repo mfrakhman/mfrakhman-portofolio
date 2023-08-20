@@ -98,8 +98,28 @@ body {
 }
 
 /* Footer */
+footer {
+  background-color: var(--bg);
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.footer-title {
+  margin-bottom: 1rem;
+}
 #contact {
-  height: 100vh;
+  height: vh;
+}
+
+.contact-info a {
+  color: white;
+  padding: 8px 8px;
+  transition: 0.8s;
+}
+
+.contact-info a:hover {
+  color: var(--secondary);
 }
 
 /* media queries */
