@@ -30,7 +30,7 @@ class Book {
     if (title) {
       const table = document.getElementById("book-list");
       table.innerHTML = "";
-      // Old Ways
+      // Old Ways to call anonymous function
       const filteredBook = LIST_OF_BOOKS.filter(function (book) {
         return book.title.toLowerCase().includes(title.toLowerCase());
       });
@@ -47,11 +47,11 @@ class Book {
     } else {
       this.setTableRow();
     }
-    // ES6
+    // ES6 to call anonymous function
     // const filterBook = LIST_OF_BOOKS.filter(book => {
     //   return book.title === title;
     // });
-    // // ES6 Simplified
+    // // ES6 Simplified to call anonymous function
     // const filterBooks = LIST_OF_BOOKS.filter(book => book.title === title);
   }
 }
