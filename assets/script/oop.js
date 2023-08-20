@@ -13,6 +13,7 @@ class Book {
 
   static setTableRow() {
     const table = document.getElementById("book-list");
+    table.innerHTML = "";
     LIST_OF_BOOKS.forEach(book => {
       const row = document.createElement("tr");
       row.innerHTML =
@@ -26,7 +27,32 @@ class Book {
   }
 
   static findByTitle(title) {
-    const table = document.getElementById("book-list");
+    if (title) {
+      const table = document.getElementById("book-list");
+      table.innerHTML = "";
+      // Old Ways
+      const filteredBook = LIST_OF_BOOKS.filter(function (book) {
+        return book.title.toLowerCase().includes(title.toLowerCase());
+      });
+      filteredBook.forEach(book => {
+        const row = document.createElement("tr");
+        row.innerHTML =
+          `<td>${book.title}</td>` +
+          `<td>${book.author}</td>` +
+          `<td>${book.year}</td>` +
+          `<td>${book.category ? book.category : "-"}</td>`;
+        row.classList.add("book-item");
+        table.appendChild(row);
+      });
+    } else {
+      this.setTableRow();
+    }
+    // ES6
+    // const filterBook = LIST_OF_BOOKS.filter(book => {
+    //   return book.title === title;
+    // });
+    // // ES6 Simplified
+    // const filterBooks = LIST_OF_BOOKS.filter(book => book.title === title);
   }
 }
 
