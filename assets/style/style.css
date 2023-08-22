@@ -1,6 +1,6 @@
 :root {
   --primary: rgb(60, 60, 60);
-  --secondary: rgb(150, 150, 150);
+  --secondary: rgba(150, 150, 150, 0.8);
   --bg: rgb(0, 0, 0);
   font-size: 16px;
 }
@@ -42,14 +42,14 @@ body {
   /* animation: invRotate 4s infinite linear; */
 }
 
-@keyframes invRotate {
+/* @keyframes invRotate {
   0% {
     transform: rotateY(0deg);
   }
   100% {
     transform: rotateY(360deg);
   }
-}
+} */
 
 .navbar .navbar-logo span {
   font-size: 1.2rem;
@@ -68,9 +68,9 @@ body {
   color: var(--secondary);
 }
 
-.navbar .navbar-nav .nav-item.active {
+/* .navbar .navbar-nav .nav-item.active {
   animation: invRotate 2s infinite linear;
-}
+} */
 
 .navbar .navbar-extra a {
   color: white;
@@ -81,7 +81,6 @@ body {
 .navbar .navbar-extra a:hover {
   color: var(--secondary);
 }
-
 
 #hamburger-menu {
   display: none;
@@ -115,6 +114,40 @@ body {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -150%;
+    width: 50%;
+    height: 100vh;
+    transition: 0.3s linear;
+    background-color: var(--secondary);
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav .nav-item {
+    color: var(--primary);
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
   }
 }
 
