@@ -82,6 +82,15 @@ body {
   color: var(--secondary);
 }
 
+.hero .main,
+section {
+  padding: 0.5rem;
+}
+
+.hero img {
+  width: 100%;
+}
+
 #hamburger-menu {
   display: none;
 }
