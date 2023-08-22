@@ -24,11 +24,12 @@ body {
   background-color: var(--bg);
   top: 0;
   width: 100%;
-  height: fit-content;
+  height: 60px;
   font-size: 1.5rem;
   align-items: center;
   justify-content: space-between;
   padding: 8px;
+  transition: 0.4s;
 }
 
 .navbar .navbar-logo {
@@ -82,13 +83,24 @@ body {
   color: var(--secondary);
 }
 
-.hero .main,
 section {
   padding: 0.5rem;
 }
 
-.hero img {
-  width: 100%;
+section h2 {
+  text-align: center;
+}
+
+.hero img,
+p {
+  width: 30rem;
+}
+
+.hero-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  justify-content: space-evenly;
 }
 
 #hamburger-menu {
@@ -184,5 +196,14 @@ footer {
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+
+  .hero img,
+  p {
+    width: 100%;
+  }
+
+  .hero-item {
+    display: block;
   }
 }
