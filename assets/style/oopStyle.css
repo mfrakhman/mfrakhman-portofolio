@@ -1,0 +1,53 @@
+:root {
+  --primary: rgba(80, 80, 80, 0.8);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.exp {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+
+.booksTable {
+  border: 1px solid black;
+  background-color: var(--primary);
+  width: 100%;
+}
+
+.booksTableHead td,
+th {
+  font-size: 1.5rem;
+  border: 1px solid black;
+  width: 50%;
+  background-color: white;
+}
+
+.table-item th {
+  width: 25%;
+}
+
+.book-item td {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.form-search input {
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+#book-list td{
+  color: white;
+  background-color: black;
+}
